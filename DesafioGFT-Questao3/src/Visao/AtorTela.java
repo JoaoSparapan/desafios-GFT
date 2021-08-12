@@ -21,7 +21,6 @@ public class AtorTela {
         ModeloDAO md = new ModeloDAO();
         Scanner ler = new Scanner(System.in);
         String trabalho;
-        boolean vrf=false;
         int opc=-1;
         Ator at;
         Modelo mo;
@@ -31,7 +30,6 @@ public class AtorTela {
             
             if(!"NOVELA".equals(trabalho.toUpperCase()) && !"MALHAÇÃO".equals(trabalho.toUpperCase())){
                 System.out.println("O trabalho deve ser Malhação ou Novela (não esqueça dos acentos)");
-                vrf=false;
             }else{
                 if(trabalho.toUpperCase().equals("NOVELA")){
                     at = new Ator();
@@ -47,7 +45,7 @@ public class AtorTela {
                     at.setPeso(ler.nextFloat());
                     
                     ad.addAtor(at);
-                    vrf=true;
+               
                 }else{
                     mo = new Modelo();
                     
@@ -61,7 +59,7 @@ public class AtorTela {
                     mo.setPeso(ler.nextFloat());
                     
                     md.addModelo(mo);
-                vrf=true;
+
                 }
             }
             
